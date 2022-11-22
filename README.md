@@ -16,3 +16,22 @@ Usage
 Place the .py file in the same directory as the `timelog.tsv` file and run. The output can be copied into your report.
 
 If you use this for your report, please cite this github page!
+
+Example output
+--------------
+
+```latex
+\begin{tabular}{rll}
+\toprule
+ Week &                           Task & Time spent \\
+\midrule
+    1 &           started a to-do list &        24m \\
+    2 &      wrote a literature review &       1h5m \\
+    3 & built a support vector machine &      5h16m \\
+    4 &                cleaned up code &       1h9m \\
+    4 &                 updated report &       1h8m \\
+\bottomrule
+\end{tabular}
+
+Total: 9h2m
+```
