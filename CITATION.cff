@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Log time to LaTeX converter
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sofia
+    family-names: Lee
+    email: sofiamarielee@gmail.com
+    orcid: 'https://orcid.org/0000-0003-1881-9578'
+abstract: >-
+  Python script to convert a time log to a LaTeX
+  table - intended for use in the Machine Learning
+  course at Vrije Universiteit Amsterdam.
+license: GPL-3.0
+commit: 2409c7f5523a43ceda4f774caae52a7023aa8db3
+version: '0.1'
+date-released: '2022-11-22'
