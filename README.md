@@ -13,9 +13,13 @@ Please also see `timelog_example.tsv` for an example.
 
 Usage
 -----
-Place the .py file in the same directory as the `timelog.tsv` file and run. The output can be copied into your report.
+Place the .py file in the same directory as the `timelog.tsv` file and run:
 
-If you use this for your report, please cite this github page!
+```bash
+python log-to-latex.py
+```
+
+The output can be copied into your report. If you use this for your report, please cite this github page!
 
 Example output
 --------------
