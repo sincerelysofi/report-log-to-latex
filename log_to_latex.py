@@ -15,6 +15,7 @@ import warnings
 # suppress various warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 pd.options.mode.chained_assignment = None
+pd.set_option('display.max_colwidth', None)
 
 def process_time(time):
     """
@@ -88,10 +89,13 @@ def main():
         out_df['Time spent'] = out_df['Time'].apply(format_time) 
 
         # output
-        print('\n\n' + out_df.to_latex(columns=['Week', 'Task', 'Time spent'],
-            index=False))
+        output = out_df.to_latex(columns=['Week', 'Task', 'Time spent'],
+            index=False)
 
-        print('Total:', format_time(out_df['Time'].sum()))
+        total = format_time(out_df['Time'].sum())
+        print('\n\n' + output)
+
+        print('Total:', total)
 
     except FileNotFoundError:
         # the file wasn't found
