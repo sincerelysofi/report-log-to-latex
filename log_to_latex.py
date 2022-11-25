@@ -8,7 +8,7 @@ This program reads a timelog.tsv file and returns a LaTeX table.
 If you use this, please credit me! See CITATION.cff in the github.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd
 import warnings
 
@@ -46,12 +46,7 @@ def format_time(delta):
     minutes = int(minutes % 60)
     
     # Format the time according to what information we have
-    if hours > 0 and minutes > 0:
-        return f'{hours}h{minutes}m'
-    elif hours > 0:
-        return f'{hours}h'
-    else:
-        return f'{minutes}m'
+    return (f'{hours}h' if hours else '') + (f'{minutes}m' if minutes else '')
 
 def get_time(begin, end):
     """
@@ -68,6 +63,9 @@ def get_time(begin, end):
     # convert them to datetime objects
     begin = process_time(begin)
     end = process_time(end)
+    
+    if end < begin:
+        end += timedelta(days=1)
     
     # get the difference
     delta = end - begin
